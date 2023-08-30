@@ -1,1 +1,18 @@
-all auth
+all authors INDEX
+
+<h2>
+    Search by Name
+</h2>
+<form action="/authors" method="get" value="<%= searchOpt %>">
+    <label>Name</label>
+    <input type="text" name="name" >
+    <button type="submit">Search</button>
+
+</form>
+<br>
+<br>
+<% authors.forEach(element => { %>
+    <div>
+        <%= element.name %>
+    </div>
+<% }); %>
